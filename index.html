@@ -341,6 +341,19 @@ body::before{
 .migrate .old{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--bad)}
 .migrate .new{color:var(--ok);border-color:var(--ok-line)}
 .migrate .arr{text-align:center;color:var(--accent)}
+.callx{font-family:var(--mono);font-size:12px;display:grid;gap:8px}
+.callx .cx{padding:9px 12px;border-radius:9px;border:1px solid var(--line);background:var(--panel-2);color:var(--soft);line-height:1.45}
+.callx .say::before{content:"🎙 ";}
+.callx .key{justify-self:end;color:var(--muted);border-style:dashed}
+.callx .key b{color:var(--accent)}
+.callx .wa{color:var(--ok);border-color:var(--ok-line)}
+.proj.feature:hover .callx .cx{animation:nudge .6s var(--ease) both}
+.proj.feature:hover .callx .cx:nth-child(2){animation-delay:.07s}
+.proj.feature:hover .callx .cx:nth-child(3){animation-delay:.14s}
+.proj.feature:hover .callx .cx:nth-child(4){animation-delay:.21s}
+.proj.feature:hover .callx .cx:nth-child(5){animation-delay:.28s}
+.proj .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.proj .links .btn{padding:10px 14px;font-size:13px}
 .proj.feature:hover .migrate .rowx{animation:nudge .6s var(--ease) both}
 .proj.feature:hover .migrate .rowx:nth-child(2){animation-delay:.07s}
 .proj.feature:hover .migrate .rowx:nth-child(3){animation-delay:.14s}
@@ -762,6 +775,23 @@ html.plane-on input,html.plane-on textarea{cursor:text!important}
         <p>Brought schema and PL/SQL changes under version control with Liquibase and Git, promoted through Dev → QA → UAT → Prod. Manual deploy errors went to zero.</p>
         <div class="metric"><b>40%</b><span>shorter release cycles</span></div>
         <div class="tags"><span class="tag">Git</span><span class="tag">Liquibase</span><span class="tag">UNIX</span><span class="tag">CI/CD</span></div>
+      </article>
+      <article class="proj feature rv" data-tilt data-name="Amma Check-in" data-stack="api testing">
+        <div>
+          <div class="client">Personal build · Elder care</div>
+          <h3>Amma Check-in</h3>
+          <p>A warm daily phone call to elderly parents in Telugu, Hindi, Tamil or English. It asks about their medicines, meals and mood, and it can ask in their own son's or daughter's recorded voice. If anything is wrong, the family gets a WhatsApp alert within seconds. Parents need no app: any phone works.</p>
+          <div class="metric"><b>4</b><span>languages, one call engine for real calls and the in-browser demo</span></div>
+          <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Twilio</span><span class="tag">WhatsApp API</span><span class="tag">Web Audio</span><span class="tag">Voice cloning</span></div>
+          <div class="links"><a class="btn ghost" href="https://github.com/shivam8897/amma-checkin" target="_blank" rel="noopener">View code on GitHub →</a></div>
+        </div>
+        <div class="callx" aria-label="A sample check-in call">
+          <div class="cx say">"Amma, have you taken your Metformin? Press 1 for yes."</div>
+          <div class="cx key">Amma pressed <b>1</b></div>
+          <div class="cx say">"Have you had your breakfast? Press 1 for yes, 2 for no."</div>
+          <div class="cx key">Amma pressed <b>2</b></div>
+          <div class="cx wa">WhatsApp → Ravi: 🍚 Amma hasn't had breakfast yet</div>
+        </div>
       </article>
     </div>
   </div>
@@ -1342,7 +1372,8 @@ Oracle/PL/SQL systems and release tooling for NBN (Australia) and TSB Bank (UK).
 • ELMS bulk loads       DataStage · AWS RDS            <span class="p">80% checks automated</span>
 • Capital & impairment  PL/SQL · IFRS 9                <span class="p">25% faster queries</span>
 • Securitization        PL/SQL · ETL                   <span class="p">15% faster module</span>
-• Database CI/CD        Git · Liquibase                <span class="p">40% faster releases</span>`,
+• Database CI/CD        Git · Liquibase                <span class="p">40% faster releases</span>
+• Amma Check-in         Node.js · Twilio · Web Audio   <span class="p">4 languages</span>`,
     skills:()=>`lang     Python, SQL, PL/SQL, shell
 orch     Apache Airflow, IBM DataStage
 db       Oracle 11g/12c/19c, tuning, partitioning

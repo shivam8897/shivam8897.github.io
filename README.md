@@ -18,7 +18,7 @@ The whole site is **one `index.html` file** of plain HTML, CSS and JavaScript. I
 | **About** | Story from aeronautical engineering to software, plus a boarding-pass card that tilts in 3D with an animated plane on its route. |
 | **Experience** | Timeline of three roles at Accenture. A progress line fills as you scroll. |
 | **Live demo** | An **Airflow-style pipeline you can run** (`tams_address_refresh`). Tasks run in dependency order, one of them sometimes fails and retries by itself, and a *chaos mode* makes failures more likely. Each run writes a live log. |
-| **Projects** | Five project cards (NBN TAMS & ELMS, TSB Capital & Impairment, Securitization, Database CI/CD) with 3D tilt and a spotlight that follows the cursor. |
+| **Projects** | Six project cards (NBN TAMS & ELMS, TSB Capital & Impairment, Securitization, Database CI/CD, and Amma Check-in) with 3D tilt and a spotlight that follows the cursor. |
 | **Query tuning** | The same SQL shown **before and after** tuning, with animated EXPLAIN PLAN rows and cost bars. |
 | **Skills** | Click a skill to highlight the projects that used it. Certifications are listed below. |
 | **Terminal** | A pretend shell you can type in: `help`, `whoami`, `projects`, `resume`, `contact`, `airflow`, `sudo hire shivam`… Use ↑/↓ for command history. |
